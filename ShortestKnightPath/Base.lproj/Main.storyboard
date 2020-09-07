@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d6h-D0-VIE">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RootViewController" customModule="Algorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5O2-8o-1l8">
+                                <rect key="frame" x="110" y="123" width="194" height="30"/>
+                                <state key="normal" title="Shortest Knight Algorithm"/>
+                                <connections>
+                                    <segue destination="jd3-GO-wbc" kind="show" id="NbC-ew-aqT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="5O2-8o-1l8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="eOd-pQ-q9t"/>
+                            <constraint firstItem="5O2-8o-1l8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="nYU-aQ-wZ9"/>
+                            <constraint firstItem="5O2-8o-1l8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYG-Lq-xI2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iwu-ew-utC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.68115942028987" y="165.40178571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="och-04-75x">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d6h-D0-VIE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="KNa-3N-Kst">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="6yc-KN-sYk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zKP-Fu-xQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="237.68115942028987" y="-536.38392857142856"/>
+        </scene>
+        <!--Shortest KnightVC-->
+        <scene sceneID="uzc-l5-vt8">
+            <objects>
+                <viewController id="jd3-GO-wbc" customClass="ShortestKnightVC" customModule="Algorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PnV-zu-OdJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination X Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y1n-NW-Tc0">
+                                <rect key="frame" x="20" y="238" width="149" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="2ly-nW-2dY"/>
+                                    <constraint firstAttribute="height" constant="21" id="yCu-wR-mGM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9SD-2c-n9G">
+                                <rect key="frame" x="185" y="229" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PGn-sw-2V1"/>
+                                    <constraint firstAttribute="width" constant="100" id="wU4-kt-Ida"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination Y Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWt-ie-lH6">
+                                <rect key="frame" x="20" y="280" width="149" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="149" id="PxO-Y7-TxP"/>
+                                    <constraint firstAttribute="height" constant="20" id="tML-cQ-8qY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJA-RB-wth">
+                                <rect key="frame" x="185" y="275" width="100" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="4Td-z8-jCw"/>
+                                    <constraint firstAttribute="height" constant="30" id="T5E-Ou-oDi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VLr-y5-atH">
+                                <rect key="frame" x="175" y="369" width="64" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="CZf-Lu-G8K"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="xnt-uP-0qF"/>
+                                </constraints>
+                                <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateResult" destination="jd3-GO-wbc" eventType="touchUpInside" id="Dqu-RP-x0a"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Valid destination x and y values above" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62X-sa-xLm">
+                                <rect key="frame" x="20" y="435" width="374" height="121"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="121" id="Bbc-gC-zVR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BK-R7-8uw">
+                                <rect key="frame" x="20" y="98" width="374" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Puf-rb-gvo"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="The initial point of your Knight is (0,0). Enter the final point to calculate the minimum steps it need, to traverse.">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="17"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WWM-hi-U4L">
+                                <rect key="frame" x="144" y="675" width="126" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="nWi-Jr-7L6"/>
+                                </constraints>
+                                <state key="normal" title="Get Path Traversal"/>
+                                <connections>
+                                    <segue destination="EzU-gS-Pms" kind="show" identifier="ShortestKnightPathVC" id="nPk-5Y-Nzl"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VLr-y5-atH" firstAttribute="top" secondItem="KJA-RB-wth" secondAttribute="bottom" constant="64" id="0Xp-zE-gge"/>
+                            <constraint firstItem="xWt-ie-lH6" firstAttribute="leading" secondItem="LgP-td-0Lx" secondAttribute="leading" constant="20" id="9Tp-rE-6Wd"/>
+                            <constraint firstItem="4BK-R7-8uw" firstAttribute="top" secondItem="LgP-td-0Lx" secondAttribute="top" constant="10" id="DdA-ZS-cum"/>
+                            <constraint firstItem="WWM-hi-U4L" firstAttribute="top" secondItem="62X-sa-xLm" secondAttribute="bottom" constant="119" id="G9M-Ie-7Ek"/>
+                            <constraint firstItem="LgP-td-0Lx" firstAttribute="trailing" secondItem="4BK-R7-8uw" secondAttribute="trailing" constant="20" id="HFN-g6-sVl"/>
+                            <constraint firstItem="y1n-NW-Tc0" firstAttribute="top" secondItem="LgP-td-0Lx" secondAttribute="top" constant="150" id="K0I-Eh-W6c"/>
+                            <constraint firstItem="LgP-td-0Lx" firstAttribute="trailing" secondItem="62X-sa-xLm" secondAttribute="trailing" constant="20" id="QOs-ZY-lkc"/>
+                            <constraint firstItem="4BK-R7-8uw" firstAttribute="leading" secondItem="LgP-td-0Lx" secondAttribute="leading" constant="20" id="X7d-fn-LF2"/>
+                            <constraint firstItem="KJA-RB-wth" firstAttribute="top" secondItem="9SD-2c-n9G" secondAttribute="bottom" constant="16" id="Y1r-hy-1rk"/>
+                            <constraint firstItem="y1n-NW-Tc0" firstAttribute="leading" secondItem="LgP-td-0Lx" secondAttribute="leading" constant="20" id="cQD-nU-smy"/>
+                            <constraint firstItem="9SD-2c-n9G" firstAttribute="leading" secondItem="y1n-NW-Tc0" secondAttribute="trailing" constant="16" id="e8q-IF-9AX"/>
+                            <constraint firstItem="9SD-2c-n9G" firstAttribute="top" secondItem="LgP-td-0Lx" secondAttribute="top" constant="141" id="eui-rD-HF3"/>
+                            <constraint firstItem="VLr-y5-atH" firstAttribute="centerX" secondItem="PnV-zu-OdJ" secondAttribute="centerX" id="gPK-2t-mRI"/>
+                            <constraint firstItem="62X-sa-xLm" firstAttribute="leading" secondItem="LgP-td-0Lx" secondAttribute="leading" constant="20" id="n7u-d6-W5j"/>
+                            <constraint firstItem="xWt-ie-lH6" firstAttribute="top" secondItem="y1n-NW-Tc0" secondAttribute="bottom" constant="21" id="nHs-Mb-pqw"/>
+                            <constraint firstItem="WWM-hi-U4L" firstAttribute="centerX" secondItem="62X-sa-xLm" secondAttribute="centerX" id="oey-tB-3k3"/>
+                            <constraint firstItem="62X-sa-xLm" firstAttribute="top" secondItem="VLr-y5-atH" secondAttribute="bottom" constant="36" id="pfD-Ph-qH3"/>
+                            <constraint firstItem="KJA-RB-wth" firstAttribute="leading" secondItem="xWt-ie-lH6" secondAttribute="trailing" constant="16" id="w5k-n3-S4c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LgP-td-0Lx"/>
+                    </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="62X-sa-xLm" id="bxK-cf-QKI"/>
+                        <outlet property="traverseDetailBtn" destination="WWM-hi-U4L" id="ytX-lN-qnh"/>
+                        <outlet property="xCordinateTextField" destination="9SD-2c-n9G" id="dSR-LS-qTD"/>
+                        <outlet property="yCordinateTextField" destination="KJA-RB-wth" id="Vwb-i7-NMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZlE-Y0-hvg" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="-536"/>
+        </scene>
+        <!--Shortest Knight PathVC-->
+        <scene sceneID="jnZ-FB-QqK">
+            <objects>
+                <tableViewController id="EzU-gS-Pms" customClass="ShortestKnightPathVC" customModule="Algorithms" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zxH-5B-93l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ShortestKnightPathVC_defaultCell" id="6Ci-NK-jUr">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Ci-NK-jUr" id="tDz-6x-9qI">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="EzU-gS-Pms" id="Stb-ZK-Bxb"/>
+                            <outlet property="delegate" destination="EzU-gS-Pms" id="Jz3-Zp-b7G"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ePE-6p-s4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-536"/>
+        </scene>
+    </scenes>
+</document>
