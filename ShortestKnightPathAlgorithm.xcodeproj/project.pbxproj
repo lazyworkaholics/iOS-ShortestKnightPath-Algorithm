@@ -316,7 +316,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6TLAD67NF;
-				INFOPLIST_FILE = Algorithms/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShortestKnightPath/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -334,7 +334,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6TLAD67NF;
-				INFOPLIST_FILE = Algorithms/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ShortestKnightPath/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
